@@ -6,16 +6,17 @@
     <title>Home Page</title>
 
     <!-- Liens css -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- liens js -->
-    <script src="js/nav.js" defer></script>
+    <script src="assets/js/nav.js" defer></script>
 
     <!-- lien biblio icons "Remix icon" -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 <body>
     <!-- Header -->
@@ -24,7 +25,7 @@
             <i class="ri-menu-2-line"></i>
         </span>
 
-        <a href="/" class="logo"><img src="img/white_logo_montee.svg" alt="Logo Montee"></a>
+        <a href="/" class="logo"><img src="assets/img/white_logo_montee.svg" alt="Logo Montee"></a>
 
         <nav id="navbar">
             <ul class="nav-links">
@@ -44,7 +45,27 @@
         </span>
     </header>
 
+    <!-- main -->
+    <main>
+        <!-- hero section -->
+        <section class="hero" id="hero">
+            <h1>Trouvez votre style ou inventez-le</h1>
+            <article class="hero-content">
+                <h2>C'est vous qui décidez !</h2>
+                <p>Choisissez un modèle unique ou créez le vôtre en quelques clics. Avec Montee, chaque t-shirt devient une déclaration de style</p>
+                <ul class="hero-btns">
+                    <li><a href="" class="primary-btn btn">Créer mon T-shirt</a></li>
+                    <li><a href="" class="secondary-btn btn ">Découvrir nos T-shirts</a></li>
+                </ul>
+            </article>
 
-    <!-- hero section  -->
+            <video autoplay loop muted class="hero-video">
+                <source src="assets/video/hero.mp4" type="video/mp4">
+                <source src="assets/videos/hero.webm" type="video/webm">
+                <source src="assets/videos/hero.ogg" type="video/ogg">
+                Votre navigateur ne prend pas en charge la balise vidéo.
+            </video>
+        </section>
+    </main>
 </body>
 </html>
