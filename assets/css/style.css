@@ -106,7 +106,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 2vh;
-    margin-bottom: 30vh;
+    margin-bottom: 5vh;
 }
 
 .wrapper h2, p {
@@ -241,8 +241,39 @@ main {
 }
 
 
+/* perso section */
+.visually-hidden {
+    display: none;
+}
 
 
+.perso {
+    background: var(--pur-black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perso article {
+    display: flex;
+    flex-direction: column;
+    gap: 7vh;
+    width: 50%;
+}
+
+.perso article h2 {
+    font-size: 3rem;
+}
+
+.perso article p {
+    text-align: left;
+}
+
+.perso article a {
+    width: 15vw;
+    text-align: center;
+}
 
 
 
@@ -305,6 +336,36 @@ main {
     .wrapper .carousel {
         grid-auto-columns: calc((100% / 2) - 12px); /* Affiche 2 cartes */
     }
+
+
+    /* perso section  */
+
+    .perso {
+        flex-direction: column;
+        padding: 5%;
+        text-align: center;
+    }
+
+    .perso article {
+        width: 90%; /* Occupe une plus grande largeur pour tablette */
+        align-items: center;
+        text-align: center;
+    }
+
+    .perso article h2 {
+        font-size: 2.5rem; /* Taille de texte ajustée pour tablette */
+    }
+
+    .perso article p {
+        font-size: 1.2rem; /* Taille de texte ajustée pour une meilleure lisibilité */
+    }
+
+    .perso article a {
+        width: auto; /* Bouton adapté à la taille du contenu */
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -397,4 +458,41 @@ main {
         right: 10px; /* Ajuster selon les besoins pour qu'il reste dans la carte */
         z-index: 1;
     }
+
+
+
+        /* perso section */
+
+        .perso article {
+            order: 2;
+        }
+
+        .perso {
+            padding: 3%;
+            text-align: center;
+        }
+    
+        .perso article {
+            width: 100%; /* Prend toute la largeur en mobile */
+            align-items: center;
+            text-align: center;
+        }
+    
+        .perso article h2 {
+            font-size: 1.8rem; /* Taille de texte réduite pour mobile */
+        }
+    
+        .perso article p {
+            font-size: 1rem; /* Ajustement pour le mobile */
+            text-align: center;
+        }
+    
+        .perso article a {
+            width: auto; /* Le bouton s'ajuste à la taille du contenu */
+            padding: 0.8rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+
+        
 }
