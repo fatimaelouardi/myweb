@@ -9,11 +9,11 @@ a {
     font-family: var(--montserrat);
 }
 
-h1, h2 {
+h1, h2, h3, label {
     font-family: var(--montserrat);
 }
 
-p{
+p, input{
     font-family: var(--roboto);
 }
 

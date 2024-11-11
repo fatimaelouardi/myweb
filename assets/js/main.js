@@ -65,4 +65,9 @@ carousel.classList.remove("no-transition");
 carousel.addEventListener('mousedown', dragStart );
 carousel.addEventListener('mousemove', dragging );
 document.addEventListener('mouseup', dragStop );
-carousel.addEventListener('scroll', infiniteScroll );
+carousel.addEventListener('scroll', infiniteScroll);
+
+
+
+
+// testimonials slider
