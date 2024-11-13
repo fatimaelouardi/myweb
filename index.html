@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez Montee, une plateforme de personnalisation de t-shirts. Créez des modèles uniques ou choisissez parmi nos bestsellers. Livraison gratuite, service client 24/7.">
+    <meta name="author" content="Farima El Ouardi">
+    <meta property="og:title" content="Montee - T-shirts personnalisés">
+    <meta property="og:description" content="Trouvez ou créez des t-shirts qui vous ressemblent avec Montee, avec une livraison rapide et gratuite.">
+    <meta property="og:image" content="assets/img/og-image.jpg">
     <title>Home Page</title>
 
     <!-- Liens css -->
@@ -11,7 +16,6 @@
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <link rel="stylesheet" href="assets/css/section.css"> -->
 
     <!-- liens js -->
     <script src="assets/js/nav.js" defer></script>
@@ -20,30 +24,51 @@
     <!-- lien biblio icons "Remix icon" -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 
+    <!-- Schema.org Metadata -->
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Website",
+          "name": "Montee",
+          "url": "https://www.montee.com",
+          "description": "Découvrez Montee, une plateforme de personnalisation de t-shirts.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Montee",
+            "logo": "assets/img/white_logo_montee.svg"
+          },
+          "sameAs": [
+            "https://www.instagram.com/montee/",
+            "https://www.pinterest.com/montee/",
+            "https://www.tiktok.com/@montee/"
+          ]
+        }
+        </script>
+
 </head>
 <body>
     <!-- Header -->
     <header>
-        <span id="menu-icon">
+        <span id="menu-icon" aria-label="Ouvrir le menu">
             <i class="ri-menu-2-line"></i>
         </span>
 
-        <a href="/" class="logo"><img src="assets/img/white_logo_montee.svg" alt="Logo Montee"></a>
+        <a href="/" class="logo"><img src="assets/img/white_logo_montee.svg" alt="Logo Montee" aria-label="Retour à l'accueil"></a>
 
-        <nav id="navbar">
+        <nav id="navbar" aria-label="Menu principal">
             <ul class="nav-links">
-                <li><a href="perso.html">Design Unique</a></li>
-                <li><a href="product.html">Découvrir</a></li>
-                <li><a href="contact.html">À votre écoute</a></li>
+                <li><a href="perso.html" aria-label="Créer un design unique">Design Unique</a></li>
+                <li><a href="product.html" aria-label="Découvrir nos produits">Découvrir</a></li>
+                <li><a href="contact.html" aria-label="Page de contact" >À votre écoute</a></li>
             </ul>
         </nav>
 
         <ul class="header-icons">
-            <li><a href="compte.html"><i class="ri-shopping-bag-2-line"></i></a></li>
-            <li><a href="panier.html"><i class="ri-user-line"></i></a></li>
+            <li><a href="compte.html"  aria-label="Accéder à mon compte"><i class="ri-shopping-bag-2-line"></i></a></li>
+            <li><a href="panier.html" aria-label="Accéder au panier"><i class="ri-user-line"></i></a></li>
         </ul>
 
-        <span id="close-icon">
+        <span id="close-icon" aria-label="Fermer le menu">
             <i class="ri-close-line"></i>
         </span>
     </header>
@@ -57,12 +82,12 @@
                 <h2>C'est vous qui décidez !</h2>
                 <p>Choisissez un modèle unique ou créez le vôtre en quelques clics. Avec Montee, chaque t-shirt devient une déclaration de style</p>
                 <ul class="hero-btns">
-                    <li><a href="" class="primary-btn btn">Créer mon T-shirt</a></li>
-                    <li><a href="" class="secondary-btn btn ">Découvrir nos T-shirts</a></li>
+                    <li><a href="" class="primary-btn btn" aria-label="Commencer la création de mon t-shirt">Créer mon T-shirt</a></li>
+                    <li><a href="" class="secondary-btn btn " aria-label="Explorer nos modèles de t-shirts">Découvrir nos T-shirts</a></li>
                 </ul>
             </article>
 
-            <video autoplay loop muted class="hero-video">
+            <video autoplay loop muted class="hero-video" aria-label="Vidéo promotionnelle de Montee">
                 <source src="assets/video/hero.mp4" type="video/mp4">
                 <source src="assets/videos/hero.webm" type="video/webm">
                 <source src="assets/videos/hero.ogg" type="video/ogg">
@@ -72,7 +97,7 @@
 
         <!-- offre -->
          <figure class="offre">
-            <img src="assets/img/offre_image.svg" alt="">
+            <img src="assets/img/offre_image.svg" alt="offre image -20% sur les produits">
          </figure>
 
 
@@ -85,7 +110,7 @@
     <h2>Découvrez Nos T-shirts Prisés</h2>
     <p>Explorez notre sélection de t-shirts les plus populaires, alliant confort et style. Trouvez le design qui vous correspond !</p>
 
-    <i id="left" class="ri-arrow-left-s-line"></i>
+    <i id="left" class="ri-arrow-left-s-line"  aria-label="Flèche gauche pour faire défiler les produits"></i>
 
     <ul class="carousel">
         <li class="card">
@@ -143,7 +168,7 @@
             </ul>
         </li>
     </ul>
-    <i id="right" class="ri-arrow-right-s-line"></i>
+    <i id="right" class="ri-arrow-right-s-line" aria-label="Flèche droite pour faire défiler les produits"></i>
 </section>
 
 
@@ -158,9 +183,9 @@
         <h2>Envie d'un T-shirt qui Vous Ressemble ?</h2>
         <p>Donnez vie à vos idées ! Avec notre outil de personnalisation, créez un t-shirt qui vous ressemble en quelques clics.</p>
 
-        <a href="perso.html" class=" btn">Créer mon T-shirt</a>
+        <a href="perso.html" class=" btn" aria-label="Commencer la personnalisation de mon t-shirt">Créer mon T-shirt</a>
     </article>
-    <figure><img src="assets/img/perso_section.jpg" alt=""></figure>
+    <figure><img src="assets/img/perso_section.jpg" alt="Exemple de t-shirt personnalisé" ></figure>
 </section>
 
 
@@ -180,17 +205,17 @@
 
     <ul class="services-cards">
         <li class="service-card">
-            <figure><img src="assets/img/service1.svg" alt=""></figure>
+            <figure><img src="assets/img/service1.svg" alt="Icône de livraison gratuite"></figure>
             <h3>LIVRAISON GRATUITE ET RAPIDE</h3>
             <p>Profitez de la livraison gratuite sur toutes vos commandes.</p>
         </li>
         <li class="service-card">
-            <figure><img src="assets/img/service2.svg" alt=""></figure>
+            <figure><img src="assets/img/service2.svg" alt="Icône de service client"></figure>
             <h3>SERVICE CLIENT DISPONIBLE 24/7</h3>
             <p>Support Client amical disponible 24/7.</p>
         </li>
         <li class="service-card">
-            <figure><img src="assets/img/service3.svg" alt=""></figure>
+            <figure><img src="assets/img/service3.svg" alt="Icône de garantie de remboursement"></figure>
             <h3>GARANTIT DE REMBOURSEMENT</h3>
             <p>Nous remboursons sous 30 jours.</p>
         </li>
@@ -205,9 +230,9 @@
 
 <section class="newsletter" id="newsletter">
     <h2>REJOIGNEZ NOTRE NEWSLETTER</h2>
-    <form action="">
-        <input type="email" placeholder="Entrez votre adresse mail...">
-        <button type="submit" class=" btn">S'inscrire</button>
+    <form >
+        <input type="email" placeholder="Entrez votre adresse mail..." aria-label="Entrez votre adresse e-mail pour la newsletter">
+        <button type="submit" class=" btn" aria-label="S'inscrire à la newsletter">S'inscrire</button>
     </form>
 </section>
 
@@ -218,12 +243,12 @@
 <footer class="footer" id="footer">
     <ul class="footer-nav">
         <li class="info">
-            <figure><img src="assets/img/logo_dark_mode.svg" alt=""></figure>
-            <p>Nous avons des vêtements qui correspondent à votre style et dont vous êtes fier de porter. Pour femmes et hommes.</p>
+            <figure><img src="assets/img/logo_dark_mode.svg" alt="Logo Montee"></figure>
+            <p class="info-p">Nous avons des vêtements qui correspondent à votre style et dont vous êtes fier de porter. Pour femmes et hommes.</p>
             <ul class="socialmedis-icons">
-                <li><a href=""><i class="ri-instagram-line"></i></a></li>
-                <li><a href=""><i class="ri-pinterest-line"></i></a></li>
-                <li><a href=""><i class="ri-tiktok-fill"></i></a></li>
+                <li><a href=""><i class="ri-instagram-line" aria-label="Consultez notre compte instagram"></i></a></li>
+                <li><a href=""><i class="ri-pinterest-line" aria-label="Consultez notre compte pinterest"></i></a></li>
+                <li><a href=""><i class="ri-tiktok-fill" aria-label="Consultez notre compte tiktok"></i></a></li>
             </ul>
         </li>
         <li class="liens-rapides">

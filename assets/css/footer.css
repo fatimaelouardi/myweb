@@ -1,15 +1,24 @@
 /* Styles généraux pour le footer */
+
+footer {
+    padding-top: 5vh;
+}
 .footer {
     background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-nav {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 8vw;
     flex-wrap: wrap;
     width: 100%;
-    padding: 3vh 5vw;
+    padding: 3vh 10vw;
     border-bottom: 1px solid var(--grey);
 }
 
@@ -21,8 +30,35 @@
     margin: 0 1vw;
 }
 
+.footer .liens {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.footer .liens a {
+    color: var(--black);
+}
+
 .footer-nav .info {
     max-width: 20rem;
+}
+
+.footer-nav .info {
+    text-align: left;
+}
+
+
+.info .info-p{
+    text-align: left;
+}
+
+.copyright {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vh 10vw;
 }
 
 
@@ -34,7 +70,7 @@
     .footer-nav {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        justify-content: center;
         padding:  2vh 0;
     }
 
@@ -63,6 +99,9 @@
 
     .footer-nav .info {
         width: 100%;
+    }
+
+    .footer-nav .info p, figure{
         text-align: center;
     }
 
@@ -92,11 +131,6 @@
         padding: 2vh 2vw;
     }
 
-    .footer-nav .info p,
-    .footer-nav .liens {
-        text-align: center;
-    }
-
     .footer-nav li h3 {
         font-size: 1.1rem;
         margin-bottom: 1vh;
@@ -104,6 +138,7 @@
 
     .footer-nav li {
         gap: 1vh;
+        margin-top: 2vh;
     }
 
     .socialmedis-icons i {
@@ -119,9 +154,7 @@
         font-size: 0.8rem;
         margin-bottom: 1vh;
         text-align: center;
-    }
 
-    .copyright figure {
-        display: none;
+
     }
 }

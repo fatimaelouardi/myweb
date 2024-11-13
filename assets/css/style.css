@@ -767,6 +767,12 @@ main {
             font-size: 0.9rem;
         }
 
+        .perso img {
+            width: 70vw;
+            height: 70vw;
+            object-fit: cover;
+        }
+
         .perso .btn {
             width: 70vw;
         }
