@@ -97,6 +97,7 @@ main {
 
 
 .wrapper {
+    margin-top: 10vh;
     max-width: 100vw;
     padding: 0 10%;
     width: 100%;
@@ -106,13 +107,24 @@ main {
     align-items: center;
     justify-content: center;
     gap: 2vh;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
 }
 
 .wrapper h2, p {
     text-align: center;
    
 } 
+.wrapper h2 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.wrapper p {
+    font-size: 1rem;
+    color: var(--section-p);
+    max-width: 600px;
+}
 
 .wrapper #left, #right {
    height: 50px;
@@ -240,6 +252,13 @@ main {
     transform: rotate3d(0, 0, 1, 360deg) scale(1.03);
 }
 
+.wrapper #left, #right {
+    width: 45px;
+    height: 45px;
+}
+
+
+
 
 /* perso section */
 .visually-hidden {
@@ -275,6 +294,160 @@ main {
     text-align: center;
 }
 
+.perso .btn {
+    color: var(--white);
+    background: var(--primary-blue);
+    width: 30vw;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: var(--bradius-btn);
+}
+
+
+
+/* services section  */
+
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-content h2 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    font-size: 1rem;
+    color: var(--section-p);
+    max-width: 600px;
+}
+
+.services-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 32px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-height: 30vh;
+    max-width: 300px;
+}
+
+.service-card figure {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.service-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-size: 1rem;
+    color: var(--black);
+    margin-bottom: 7px;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: var(--section-p);
+}
+
+
+/* newsletter section */
+
+.newsletter {
+    background: var(--pur-black);
+    color: var(white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 80%;
+    margin: 0 auto;
+    height: 20vh;
+    border-radius: 32px;
+    padding: 0 3%;
+}
+
+/* Title */
+.newsletter h2 {
+    color: var(--white);
+    text-decoration: underline;
+    font-size: 1.9rem;
+    width: 20vw;
+}
+
+
+
+/* Form */
+.newsletter form {
+    display: flex;
+    flex-direction: column; 
+    gap: 1vh;
+}
+
+.newsletter form input {
+    padding-left: 1vw;
+}
+
+.newsletter form .btn {
+    background: var(--primary-blue);
+    font-weight: bold;
+    color: var(--white);
+}
+
+.newsletter form input, .btn {
+    width: 20vw;
+    height: 6vh;
+    border-radius: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -304,13 +477,16 @@ main {
         align-items: center;
         text-align: center;
     }
+    .hero h1 {
+        font-size: 1.9rem;
+    }
 
     .hero .hero-content h2 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .hero-content p {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .hero .hero-btns {
@@ -321,22 +497,40 @@ main {
         padding-top: 4%;
     }
 
+
+
     .primary-btn,
     .secondary-btn {
-        padding: 1.5rem 3rem; 
+       width: 30vw;
         font-size: 1.2rem; 
         border-radius: 32px; 
     }
+
+
+
 
     .hero video {
         display: none; 
     }
 
+
+
     
     /* best sellers section responsive */
     .wrapper .carousel {
-        grid-auto-columns: calc((100% / 2) - 12px); /* Affiche 2 cartes */
+        grid-auto-columns: calc((100% / 2) - 12px); 
     }
+
+    .col-icon {
+         bottom: 10vh;
+         right: 2vw;
+    }
+
+    .col-icon i {
+        width: 32px;
+        height: 32px;
+    }
+
 
 
     /* perso section  */
@@ -348,24 +542,102 @@ main {
     }
 
     .perso article {
-        width: 90%; /* Occupe une plus grande largeur pour tablette */
+        width: 90%; 
         align-items: center;
         text-align: center;
     }
 
     .perso article h2 {
-        font-size: 2.5rem; /* Taille de texte ajustée pour tablette */
+        font-size: 2.5rem; 
     }
 
     .perso article p {
-        font-size: 1.2rem; /* Taille de texte ajustée pour une meilleure lisibilité */
-    }
-
+        font-size: 1.2rem;
     .perso article a {
-        width: auto; /* Bouton adapté à la taille du contenu */
+        width: auto; 
         padding: 1rem 2rem;
         font-size: 1rem;
     }
+
+
+    .services {
+        padding: 40px 15px;
+    }
+
+    .service-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-content p {
+        font-size: 1rem;
+    }
+
+    .services-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .service-card {
+        max-width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+
+
+
+    /* newsletter section */
+    .newsletter {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        padding: 4% 5%; 
+        height: auto; 
+        
+    }
+
+    .newsletter h2 {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .newsletter form {
+        display: flex;
+        flex-direction: column; 
+        gap: 2vh;
+        width: 100%;
+        align-items: center;
+    }
+
+    .newsletter form input, 
+    .newsletter form .btn {
+        width: 80%;
+        height: 6vh;
+        border-radius: 32px;
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    .newsletter form .btn {
+        background: var(--primary-blue);
+        font-weight: bold;
+        color: var(--white);
+    }
+
+
+}
+
+    
+    
 
 }
 
@@ -394,6 +666,7 @@ main {
         text-align: center;
     }
 
+
     .hero .hero-content h2 {
         font-size: 1.8rem;
     }
@@ -411,6 +684,7 @@ main {
         padding-top: 4%;
     }
 
+
     .primary-btn,
     .secondary-btn {
         padding: 1.2rem 2.5rem; 
@@ -425,14 +699,13 @@ main {
     /* best sellers section responsive */
 
     .wrapper .carousel {
-        grid-auto-columns: 100%; /* Affiche 1 carte */
+        grid-auto-columns: 100%; 
     }
 
-    /* Positionner les flèches côte à côte sous le carrousel */
     .wrapper #left,
     .wrapper #right {
         position: absolute;
-        bottom: -60px; /* Positionner les flèches sous le carrousel */
+        bottom: -60px; 
         width: 40px;
         height: 40px;
         font-size: 1.5rem;
@@ -441,7 +714,7 @@ main {
         justify-content: center;
     }
 
-    /* Positionnement côte à côte des flèches */
+ 
     .wrapper #left {
         left: 50%;
         transform: translateX(-15vw) translateY(27vh);
@@ -452,11 +725,10 @@ main {
         transform: translateX(5vw) translateY(27vh);
     }
 
-    /* Assurer que .col-icon reste dans la carte en mobile */
     .carousel .card .col-icon {
         position: absolute;
         bottom: 20px;
-        right: 10px; /* Ajuster selon les besoins pour qu'il reste dans la carte */
+        right: 10px; 
         z-index: 1;
     }
 
@@ -469,31 +741,165 @@ main {
         }
 
         .perso {
+            margin-top: 20%;
             padding: 3%;
             text-align: center;
         }
     
         .perso article {
-            width: 100%; /* Prend toute la largeur en mobile */
+            width: 100%; 
             align-items: center;
             text-align: center;
         }
     
         .perso article h2 {
-            font-size: 1.8rem; /* Taille de texte réduite pour mobile */
+            font-size: 1.8rem;
         }
     
         .perso article p {
-            font-size: 1rem; /* Ajustement pour le mobile */
+            font-size: 1rem;
             text-align: center;
         }
     
         .perso article a {
-            width: auto; /* Le bouton s'ajuste à la taille du contenu */
+            width: 100vw; 
             padding: 0.8rem 1.5rem;
             font-size: 0.9rem;
         }
 
+        .perso .btn {
+            width: 70vw;
+        }
+        .services {
+            padding: 30px 10px;
+        }
+    
+        .service-content h2 {
+            font-size: 1.5rem;
+        }
+    
+        .service-content p {
+            font-size: 0.9rem;
+        }
+    
+        .services-cards {
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        .service-card {
+            padding: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+    
+        .service-card h3 {
+            font-size: 1rem;
+        }
+    
+        .service-card p {
+            font-size: 0.85rem;
+        }
+
+
+
+        /* newsletter section  */
+        .newsletter {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 5% 3%; 
+            height: auto; 
+        }
+    
+        .newsletter h2 {
+            font-size: 1.4rem;
+            width: 90%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    
+        .newsletter form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+            align-items: center;
+        }
+    
+        .newsletter form input, 
+        .newsletter form .btn {
+            width: 90%;
+            height: 6vh;
+            border-radius: 32px;
+            font-size: 1rem;
+            padding-left: 1rem;
+        }
+    
+        .newsletter form .btn {
+            background: var(--primary-blue);
+            font-weight: bold;
+            color: var(--white);
+        }
+     
 
         
 }
+
+
+@media (min-width: 540px) and (max-width: 720px) {
+    .services-cards {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 20px;
+    }
+
+    .service-card {
+        max-width: 95%;
+        margin: auto;
+    }
+
+     /* newsletter section  */
+     .newsletter {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        padding: 5% 3%; 
+        height: auto; 
+    }
+    .newsletter h2 {
+        font-size: 1.4rem;
+        width: 90%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+ 
+    .newsletter form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        align-items: center;
+    }
+
+    .newsletter form input, 
+    .newsletter form .btn {
+        width: 90%;
+        height: 6vh;
+        border-radius: 32px;
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    .newsletter form .btn {
+        background: var(--primary-blue);
+        font-weight: bold;
+        color: var(--white);
+    }
+ 
+
+   
+}
+

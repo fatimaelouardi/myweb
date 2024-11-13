@@ -1,0 +1,157 @@
+main {
+    padding-top: 10%;
+}
+.panier-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.panier-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-list {
+    flex: 2;
+    list-style: none;
+    padding: 0;
+}
+
+.product-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.product-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+
+
+.order-summary {
+    list-style: none;
+    padding: 0;
+}
+
+.order-summary li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.order-summary li strong {
+    font-size: 1.2em;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #333;
+}
+.panier-aside {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: sticky;
+    top: 20px; /* Fixe l'aside après un petit espace */
+    height: fit-content;
+    max-height: 600px; /* Limite la hauteur de l'aside */
+    overflow-y: auto; /* Si l'aside devient trop grand, ajoute un scroll */
+}
+
+/* Responsive */
+
+
+@media (max-width: 1024px) {
+    main {
+        padding-top: 20%;
+    }
+    .panier-content {
+        flex-direction: column;
+        align-items: center; /* Aligner les éléments au centre */
+    }
+
+    .product-item {
+        align-items: center;
+        margin-bottom: 20px; /* Espacement entre les produits */
+    }
+
+    .product-item img {
+        width: 100px; /* Ajustement de la taille de l'image */
+        height: 100px;
+    }
+
+    /* L'aside prend une largeur de 100% en mode tablette */
+    .panier-aside {
+        width: 100%;
+        margin-top: 20px; /* Espacement avant l'aside */
+        position: relative; /* Retirer le sticky sur tablette */
+    }
+
+    /* Liste des produits */
+    .product-list {
+        width: 100%; /* S'assurer que la liste occupe toute la largeur disponible */
+    }
+
+    /* Détails du total dans l'aside */
+    .order-summary li {
+        font-size: 1em; /* Réduire la taille de la police pour les petits écrans */
+    }
+
+    .checkout-btn {
+        font-size: 1em; /* Ajuster la taille du bouton */
+        padding: 12px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 20%;
+    }
+    .panier-content {
+        flex-direction: column;
+    }
+
+    .product-item {
+        align-items: center;
+    }
+
+    /* L'aside devient pleine largeur sur mobile */
+    .panier-aside {
+        width: 100%;
+        margin-top: 20px; /* Espacement avant l'aside */
+    }
+}

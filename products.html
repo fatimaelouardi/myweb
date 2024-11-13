@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="assets/css/products.css">
+    <script src="assets/js/products.js" defer></script>
+</head>
+<body>
+    <main class="product-page">
+        <!-- Aside for Filters -->
+        <aside class="filters">
+            <h2>Filters</h2>
+            <form id="filter-form">
+                <!-- Categories -->
+                <div class="filter-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category">
+                        <option value="">All</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                </div>
+                <!-- Colors -->
+                <div class="filter-group">
+                    <label for="color">Color</label>
+                    <select id="color" name="color">
+                        <option value="">All</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </div>
+                <!-- Sizes -->
+                <div class="filter-group">
+                    <label for="size">Size</label>
+                    <select id="size" name="size">
+                        <option value="">All</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                    </select>
+                </div>
+                <!-- Price Range -->
+                <div class="filter-group">
+                    <label for="price">Price</label>
+                    <input type="range" id="price" name="price" min="0" max="500" step="10">
+                </div>
+                <!-- Apply Filters Button -->
+                <button type="submit">Apply Filters</button>
+            </form>
+        </aside>
+
+        <!-- Product List -->
+        <section class="product-list">
+            <div class="products">
+                <!-- Product Card Example -->
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product Name</h3>
+                    <p>$20.00</p>
+                </div>
+                <!-- More product cards go here -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="prev">Previous</button>
+                <button class="next">Next</button>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Liens CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+
+    <!-- Liens JS -->
+    <script src="assets/js/nav.js" defer></script> 
+    <script src="assets/js/product.js" defer></script> 
+
+    <!-- Lien Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <span id="menu-icon">
+            <i class="ri-menu-2-line"></i>
+        </span>
+
+        <a href="/" class="logo"><img src="assets/img/white_logo_montee.svg" alt="Logo Montee"></a>
+
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="perso.html">Design Unique</a></li>
+                <li><a href="produits.html">Découvrir</a></li>
+                <li><a href="contact.html">À votre écoute</a></li>
+            </ul>
+        </nav>
+
+        <ul class="header-icons">
+            <li><a href="compte.html"><i class="ri-shopping-bag-2-line"></i></a></li>
+            <li><a href="panier.html"><i class="ri-user-line"></i></a></li>
+        </ul>
+
+        <span id="close-icon">
+            <i class="ri-close-line"></i>
+        </span>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="product-page">
+            <h1 class="visually-hidden">Produit</h1>
+
+            <section class="product-info">
+                <h2 class="visually-hidden">Informations sur le produit</h2>
+                <div class="product-images">
+                    <ul class="second-images">
+                        <li><img src="assets/img/prod-img-sec1.jpg" alt=""></li>
+                        <li><img src="assets/img/prod-img-sec2.jpg" alt=""></li>
+                        <li><img src="assets/img/prod-img-sec1.jpg" alt=""></li>
+                    </ul>
+                    <figure class="image-princip">
+                        <img id="main-image" src="assets/img/product-img-princip.jpg" alt="">
+                    </figure>
+                </div>
+
+                <section class="product-details">
+                    <h2>Nom du Produit</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, omnis eos. Eaque voluptatibus reiciendis voluptatum tempora non explicabo commodi, magni quod, corporis velit quia modi est expedita optio iusto voluptatem.</p>
+                    <ul class="stars">
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                    </ul>
+                    <p class="price">29.99 € <span> -20% </span></p>
+
+                    <!-- Sélection de la couleur avec des cercles -->
+                    <label>Couleur:</label>
+                    <div class="color-options">
+                        <div class="color-option" id="color-rouge" style="background-color: red;" data-color="rouge">
+                            <i class="ri-check-line"></i>
+                        </div>
+                        <div class="color-option" id="color-bleu" style="background-color: blue;" data-color="bleu">
+                            <i class="ri-check-line"></i>
+                        </div>
+                        <div class="color-option" id="color-vert" style="background-color: green;" data-color="vert">
+                            <i class="ri-check-line"></i>
+                        </div>
+                        <div class="color-option" id="color-blanc" style="background-color: white;" data-color="blanc">
+                            <i class="ri-check-line"></i>
+                        </div>
+                    </div>
+
+                    <!-- Sélection de la taille avec des cercles -->
+                    <label>Taille:</label>
+                    <div class="size-options">
+                        <div class="size-option" data-size="S">S</div>
+                        <div class="size-option" data-size="M">M</div>
+                        <div class="size-option" data-size="L">L</div>
+                        <div class="size-option" data-size="XL">XL</div>
+                    </div>
+
+                    <!-- Quantité et bouton Ajouter au panier -->
+                    <div class="ctaEtquantity">
+                        <!-- Quantité avec les boutons + et - -->
+                        <div class="quantity">
+                            <label>Quantité:</label>
+                            <div class="quantity-control">
+                                <button id="decrease">-</button>
+                                <span id="quantity-display">1</span>
+                                <button id="increase">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Bouton Ajouter au panier -->
+                        <button id="add-to-cart" class="primary-btn">Ajouter au panier</button>
+                    </div>
+                </section>
+            </section>
+        </section>
+
+
+
+
+
+
+
+        <!-- details -->
+
+        <div class="tabs">
+            <ul class="tab-titles">
+              <li class="tab-title active" data-tab="product-details"><h3>Détails du produit</h3></li>
+              <li class="tab-title" data-tab="reviews"><h3>Évaluations & avis</h3></li>
+              <li class="tab-title" data-tab="faqs"><h3>FAQs</h3></li>
+            </ul>
+          
+            <div class="tab-content active" id="product-details">
+              <h2>Détails du produit</h2>
+              <p>Voici les informations détaillées du produit.</p>
+            </div>
+          
+            <div class="tab-content" id="reviews">
+              <h2>Évaluations & avis</h2>
+              <p>Avis des clients sur ce produit.</p>
+            </div>
+          
+            <div class="tab-content" id="faqs">
+              <h2>FAQs</h2>
+              <p>Questions fréquemment posées sur ce produit.</p>
+            </div>
+          </div>
+
+
+
+          <!-- suggestions -->
+
+         <section class="suggestions">
+            <h2 class="visually-hidden"></h2>
+           <article>
+            <h2 >Hello word</h2>
+            <p >Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+           </article>
+            <ul class="suggest-cards">
+                <li class="sug-card">
+                    <figure class="card-img">
+                       <img src="assets/img/best-seller1.jpg" alt=""> 
+                    </figure>
+                    <ul class="card-icon">
+                        <li><a href="#"><i class="ri-heart-line"></i></a></li>
+                        <li><a href="#"><i class="ri-shopping-bag-2-line"></i></a></li>
+                    </ul>
+                </li>
+                <li class="sug-card">
+                    <figure class="card-img">
+                       <img src="assets/img/best-seller2.jpg" alt=""> 
+                    </figure>
+                    <ul class="card-icon">
+                        <li><a href="#"><i class="ri-heart-line"></i></a></li>
+                        <li><a href="#"><i class="ri-shopping-bag-2-line"></i></a></li>
+                    </ul>
+                </li>
+                <li class="sug-card">
+                    <figure class="card-img">
+                       <img src="assets/img/best-seller3.jpg" alt=""> 
+                    </figure>
+                    <ul class="card-icon">
+                        <li><a href="#"><i class="ri-heart-line"></i></a></li>
+                        <li><a href="#"><i class="ri-shopping-bag-2-line"></i></a></li>
+                    </ul>
+                </li>
+    
+                </ul>
+         </section>
+          
+    </main>
+</body>
+</html>

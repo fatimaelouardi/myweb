@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passer à la commande</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/caisse.css">
+    <script src="assets/js/nav.js" defer></script>
+    <script src="assets/js/caisse.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <span id="menu-icon">
+            <i class="ri-menu-2-line"></i>
+        </span>
+        <a href="/" class="logo"><img src="assets/img/white_logo_montee.svg" alt="Logo Montee"></a>
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="perso.html">Design Unique</a></li>
+                <li><a href="produits.html">Découvrir</a></li>
+                <li><a href="contact.html">À votre écoute</a></li>
+            </ul>
+        </nav>
+        <ul class="header-icons">
+            <li><a href="compte.html"><i class="ri-shopping-bag-2-line"></i></a></li>
+            <li><a href="panier.html"><i class="ri-user-line"></i></a></li>
+        </ul>
+        <span id="close-icon">
+            <i class="ri-close-line"></i>
+        </span>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="commande-page">
+            <h1>Passer à la commande</h1>
+            <div class="commande-content">
+                <!-- Section des adresses de livraison et méthode de paiement à gauche -->
+                <section class="left-content">
+                    <h2>Adresse de livraison</h2>
+                    <ul class="address-list" id="address-list">
+                        <!-- Liste des adresses -->
+                        <li class="address-item">
+                            <input type="radio" name="address" id="address1" value="123 Rue Exemple, Paris, France" checked>
+                            <label for="address1">123 Rue Exemple, Paris, France</label>
+                        </li>
+                        <li class="address-item add-address" id="add-address">
+                            <i class="ri-add-circle-line"></i> Ajouter une nouvelle adresse
+                        </li>
+                    </ul>
+                    <!-- Message d'erreur pour maximum 3 adresses -->
+                    <p id="address-limit-message" style="color: red; display: none;">Vous ne pouvez pas ajouter plus de 3 adresses.</p>
+                    
+                    <!-- Formulaire d'ajout d'une nouvelle adresse -->
+                    <div id="address-form" class="address-form">
+                        <h3>Ajouter une adresse</h3>
+                        <form id="new-address-form">
+                            <label for="address">Adresse :</label>
+                            <input type="text" id="address" name="address" required>
+                            <label for="city">Ville :</label>
+                            <input type="text" id="city" name="city" required>
+                            <label for="postal-code">Code postal :</label>
+                            <input type="text" id="postal-code" name="postal-code" required>
+                            <button type="submit" class="btn">Enregistrer</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Méthode de paiement -->
+                    <div class="payment-method">
+                        <h2>Méthode de paiement</h2>
+                        <div class="payment-options">
+                            <button class="payment-btn" id="payment-card">Carte bancaire</button>
+                            <button class="payment-btn" id="payment-paypal">PayPal</button>
+                        </div>
+                        
+                        <!-- Formulaire pour carte bancaire -->
+                        <div id="card-form" class="payment-form">
+                            <h3>Informations carte bancaire</h3>
+                            <form>
+                                <label for="card-number">Numéro de carte :</label>
+                                <input type="text" id="card-number" name="card-number" required>
+                                <label for="card-expiry">Date d'expiration :</label>
+                                <input type="text" id="card-expiry" name="card-expiry" required>
+                                <label for="card-cvc">CVC :</label>
+                                <input type="text" id="card-cvc" name="card-cvc" required>
+                                <button type="submit" class="btn">Payer</button>
+                            </form>
+                        </div>
+
+                        <!-- Lien PayPal -->
+                        <div id="paypal-form" class="payment-form">
+                            <h3>Se connecter à PayPal</h3>
+                            <button id="paypal-btn">Se connecter à PayPal</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Détails de la commande à droite -->
+                <aside class="commande-aside">
+                    <h2>Détails de la commande</h2>
+                    <ul class="order-summary">
+                        <li>Sous-total : <span id="subtotal">0</span> €</li>
+                        <li>Remise (-20%) : <span id="discount">0</span> €</li>
+                        <li>Frais de livraison : <span id="shipping">0</span> €</li>
+                        <li>Total : <strong id="total">0</strong> €</li>
+                    </ul>
+                    <button class="checkout-btn" id="checkout-btn">Passer la commande</button>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Bloc de confirmation de commande -->
+        <div id="confirmation" class="confirmation">
+            <div class="confirmation-content">
+                <h2>Votre commande a bien été passée !</h2>
+                <button id="home-btn" class="home-btn">Revenir à la page d'accueil</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

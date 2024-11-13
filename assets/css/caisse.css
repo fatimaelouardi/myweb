@@ -1,0 +1,284 @@
+/* Commande Page */
+main {
+    padding-top: 10%;
+}
+
+.commande-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Commande Content */
+.commande-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.left-content {
+    flex: 1;
+}
+
+.address-list {
+    list-style: none;
+    padding: 0;
+}
+
+.address-item {
+    padding: 15px;
+    border-radius: 32px;
+    margin-bottom: 10px;
+    background-color: #f7f7f7;
+}
+
+#new-address-form {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 1vh;
+    color: var(--black);
+}
+
+#new-address-form input {
+    height: 4.5vh;
+    border-radius: 32px;
+    border: 1px solid var(--grey);
+}
+
+#new-address-form .btn {
+    background: var(--primary-blue);
+    color: var(--white);
+    border-radius: 32px;
+    width: 100%;
+    max-width: 20vw;
+    height: 5vh;
+    border: none;
+    cursor: pointer;
+}
+
+#new-address-form .btn:hover {
+    background: #000;
+    transition: all .6s ease;
+}
+
+.add-address {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 2px dashed #ccc;
+    padding: 10px;
+    border-radius: 32px;
+    color: #000;
+    width: 100%;
+    max-width: 30vw;
+}
+
+.payment-method {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-btn {
+    padding: 10px 20px;
+    border: none;
+    border: 1px solid #333;
+    color: black;
+    border-radius: 32px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 20vw;
+}
+
+.payment-btn:hover {
+    transition: all .6s ease-in-out;
+    background-color: var(--secondary-blue);
+    border: none;
+    color: var(--white);
+}
+
+/* Formulaire */
+.address-form, .payment-form {
+    display: none;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.payment-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding-top: 2vh;
+}
+
+.payment-form form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 32px;
+    border: 1px solid var(--grey);
+}
+
+.payment-form .btn {
+    width: 100%;
+    max-width: 20vw;
+    height: 5vh;
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    font-weight: bold;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+#paypal-btn {
+    margin-top: 2vh;
+    width: 100%;
+    max-width: 20vw;
+    height: 5vh;
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    font-weight: bold;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+/* Fixe l'aside à droite */
+.commande-aside {
+    width: 300px;
+    max-width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+
+.order-summary {
+    list-style: none;
+    padding: 0;
+}
+
+.order-summary li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.order-summary li strong {
+    font-size: 1.2em;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #333;
+}
+
+/* Confirmation Block */
+.confirmation {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-content {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.home-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.home-btn:hover {
+    background-color: var(--black);
+}
+
+/* Cacher l'adresse au-delà de 3 */
+#address-limit-message {
+    display: none;
+}
+
+/* Responsive pour tablettes */
+@media (max-width: 1024px) {
+    main{
+        padding-top: 15%;
+    }
+    .commande-content {
+        flex-direction: column;
+    }
+
+    .commande-aside {
+        width: 100%;
+    }
+
+    .payment-btn, .checkout-btn, #new-address-form .btn, #paypal-btn {
+        width: 100%;
+    }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 768px) {
+    main {
+        padding-top: 5%;
+    }
+
+    .checkout-btn, .payment-btn, #new-address-form .btn, #paypal-btn {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    main{
+        padding-top: 10%;
+    }
+    .address-item, .add-address {
+        width: 100%;
+    }
+
+    .checkout-btn, .payment-btn, #new-address-form .btn, #paypal-btn {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+}

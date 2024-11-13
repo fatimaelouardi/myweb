@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/perso.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fabric@4.5.0/dist/fabric.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
+    <script src="assets/js/perso.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- T-Shirt container -->
+        <div id="tshirt-div">
+            <img id="tshirt-backgroundpicture" src="https://ourcodeworld.com/public-media/gallery/gallery-5d5afd3f1c7d6.png"/>
+            <div id="drawingArea" class="drawing-area">
+                <div class="canvas-container">
+                    <canvas id="tshirt-canvas" width="200" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aside avec outils de personnalisation -->
+        <aside>
+            <div class="tools">
+                <div class="tool-item">
+                    <i class="ri-palette-fill"></i>
+                    <label for="tshirt-color">Color:</label>
+                    <select id="tshirt-color">
+                        <option value="#fff">White</option>
+                        <option value="#000">Black</option>
+                        <option value="#f00">Red</option>
+                        <option value="#008000">Green</option>
+                        <option value="#ff0">Yellow</option>
+                    </select>
+                </div>
+
+                <div class="tool-item">
+                    <i class="ri-image-fill"></i>
+                    <label for="tshirt-custompicture">Upload Image:</label>
+                    <input type="file" id="tshirt-custompicture" />
+                </div>
+
+                <div class="tool-item">
+                    <i class="ri-text"></i>
+                    <label for="tshirt-text">Add Text:</label>
+                    <input type="text" id="tshirt-text" placeholder="Enter your text" />
+                </div>
+
+                <div class="tool-item">
+                    <i class="ri-font-size"></i>
+                    <label for="text-font">Font Style:</label>
+                    <select id="text-font">
+                        <option value="Arial">Arial</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+                </div>
+
+                <div class="tool-item">
+                    <i class="ri-brush-fill"></i>
+                    <label for="text-color">Text Color:</label>
+                    <input type="color" id="text-color" value="#000000" />
+                </div>
+
+                <button id="add-text-button">Add Text to T-Shirt</button>
+            </div>
+        </aside>
+    </div>
+
+    <p>To remove a loaded picture on the T-Shirt select it and press the <kbd>DEL</kbd> key.</p>
+</body>
+</html>

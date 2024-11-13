@@ -1,0 +1,127 @@
+/* Styles généraux pour le footer */
+.footer {
+    background-color: var(--white);
+}
+
+.footer-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 3vh 5vw;
+    border-bottom: 1px solid var(--grey);
+}
+
+.footer-nav li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin: 0 1vw;
+}
+
+.footer-nav .info {
+    max-width: 20rem;
+}
+
+
+
+/* Pour tablette (largeur max de 768px) */
+@media (max-width: 1024px) {
+
+    
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding:  2vh 0;
+    }
+
+    .footer-nav li {
+        text-align: center;
+        width: 100%;
+        gap: 1vh;
+        
+    }
+
+    .footer-nav .liens {
+        padding: 1vh 0;
+    }
+
+    .footer-nav li h3 {
+        font-size: 1.5rem;
+    }
+
+    .footer-nav .liens a {
+        color: var(--black);
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+
+
+
+    .footer-nav .info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-nav .info p{
+        font-size: 1.5rem;
+
+    }
+    .socialmedis-icons {
+        justify-content: center;
+    }
+
+    .copyright {
+        flex-direction: column;
+        align-items: center;
+        padding: 2vh 0;
+    }
+    .copyright figure {
+        padding-top: 2vh;
+        text-align: center;
+    }
+
+}
+
+/* Pour mobile (largeur max de 480px) */
+@media (max-width: 480px) {
+    .footer-nav {
+        padding: 2vh 2vw;
+    }
+
+    .footer-nav .info p,
+    .footer-nav .liens {
+        text-align: center;
+    }
+
+    .footer-nav li h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1vh;
+    }
+
+    .footer-nav li {
+        gap: 1vh;
+    }
+
+    .socialmedis-icons i {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+
+    .copyright {
+        padding: 1vh 2vw;
+    }
+
+    .copyright p {
+        font-size: 0.8rem;
+        margin-bottom: 1vh;
+        text-align: center;
+    }
+
+    .copyright figure {
+        display: none;
+    }
+}
